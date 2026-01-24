@@ -125,7 +125,7 @@ cd ..
 
 # 如果是正常系统无需进行此步骤
 # 以用户态运行 tailscaled 然后挂起，并丢弃所有输出
-# d -> daemon，守护进程。由于此 Ubuntu Linux 系统运行在 docker 中，且系统本身经过阉割，所以守护进程无法自动运行，也无法在常规内核态运行
+# d -> daemon，守护进程。由于此 Alpine Linux 系统运行在 docker 中，且系统本身经过阉割，所以守护进程无法自动运行，也无法在常规内核态运行
 nohup ./tailscaled --tun=userspace-networking --socks5-server=localhost:1055 > /dev/null 2>&1 &
 
 # 启动后自动要求登录。通过链接，可以直接在 Windows 浏览器中登录，无需手动配置密钥，非常方便
