@@ -120,7 +120,8 @@ cd ~ # 或者 cd root/
 wget https://dl.tailscale.com/stable/tailscale_1.92.5_amd64.tgz # 获取可执行文件的压缩归档
 tar -xf tailscale_1.92.5_amd64.tgz # 解压
 cd tailscale_1.92.5_amd64/ # 进入解压后的目录
-mv * .. # 将所有文件移入父目录 bin 中
+mv * .. # 将所有文件移入父目录中
+cd ..
 
 # 如果是正常系统无需进行此步骤
 # 以用户态运行 tailscaled 然后挂起，并丢弃所有输出
