@@ -186,6 +186,8 @@ nano auto.sh # 此镜像自带一个 busybox，无需我们安装
 # 在文本编辑器中粘贴刚刚的两句指令
 nohup /root/tailscaled --tun=userspace-networking --socks5-server=localhost:1055 > /dev/null 2>&1 &
 /root/tailscale up
+
+# 记得保存并退出。留意 nano 下方的提示，一般是 CTRL + X，然后接一个 y
 ```
 
 ```sh
@@ -249,11 +251,19 @@ tailscale up --advertise-exit-node=false # 停止申请成为出口节点
 ### 本教程历史更新记录
 
 2025 年 5 月，发现 Tailscale 作为出口节点软件的可行性
+
 2025 年 9 月，使用 Github 学生开发者包免费租用到了 Azure 的虚拟机，成功实现了 Tailscale + VPS 搭建节点，此方法技术门槛已经非常低了
+
 2025 年 10 月，基于 Azure 平台做出 v1.0 版本教程。但 Azure 刚需学生开发者包或信用卡，这使得此教程注定不能适用于多数人
+
 2025 年 11 月，考虑到 Azure 的学生许可并非永久，开始寻找其他租用虚拟机的解决方案
+
 2025 年 11 月，成功使用 Claw Cloud 上的 Devbox 虚拟机搭建节点，了解了如何将 Linux 的 Docker 镜像用作 VPS
+
 2025 年 12 月，做出 v2.0 版本教程，命名为“基于 Claw Cloud Devbox + Tailscale 的自建节点科学上网教程”
+
 2026 年 1 月，Claw Cloud 宣布停止 Devbox 服务。不过我既已知道如何容器化 VPS，转向使用 App Launchpad 也就不是什么难事，只是操作步骤变多了
+
 2026 年 1 月，更新出 v3.0 版教程，当时选用的镜像名为“rastasheep/ubuntu-sshd”，为机器开启了公网访问端口，以方便在 cmd 中进行 ssh 连接。不过，在公网上暴露的公共镜像使得此教程存在较大的安全问题
+
 2026 年 1 月，完善并改进教程（v3.1），更换镜像为现在的 alpine 镜像，取消机器的公网暴露而改为网页版 SSH 命令行连接，既提高了安全性，端口节省出的额度还能将 CPU 由 0.5 升级到 1 而让机器在高负载情况下表现更好，同时操作步骤更加精简
