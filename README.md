@@ -236,7 +236,7 @@ tailscale up --advertise-exit-node=false # 停止申请成为出口节点
 1. 浏览器打开 Claw Cloud 官网，进入 App Launchpad
 2. 机器右侧 Operation，选择 Restart
 3. 待机器重新回到 Running 状态后，点击机器名称进入详情页面
-4. 往下拉找到右下角 Operation，点击 Logs, Restart 右边的带命令行图案的按钮连接机器
+4. 往下拉找到右下角 Operation，点击带命令行图案的按钮连接机器，它在 Logs, Restart 按钮的右边
 5. 注意连接的机器名称一定要对，比如 root@clawcloud-alpine-japan-0。不要按回车重新连接，重连到的机器必不对
 6. 输入指令：`/root/auto.sh`，回车
 7. 按住 ctrl 点击弹出的链接，将机器加入 Tailnet 中
