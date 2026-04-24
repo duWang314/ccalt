@@ -108,20 +108,20 @@ App Launchpad 界面，找到刚刚的机器，点击右侧命令行按钮
 
 - [ ] 2. Windows 安装 Tailscale
 
-https://dl.tailscale.com/stable/tailscale-setup-1.92.5.exe
+https://dl.tailscale.com/stable/tailscale-setup-1.96.4.exe
 
 这是官网直接给出的安装包，如果发现此安装包安装时报错，尝试微调下载地址以获取完整版安装包：
 
-https://dl.tailscale.com/stable/tailscale-setup-full-1.92.5.exe
+https://dl.tailscale.com/stable/tailscale-setup-full-1.96.4.exe
 
 - [ ] 3. Linux 安装并登录 Tailscale
 
 ```sh
 # 安装过程详解
 cd ~ # 或者 cd root/
-wget https://dl.tailscale.com/stable/tailscale_1.92.5_amd64.tgz # 获取可执行文件的压缩归档
-tar -xf tailscale_1.92.5_amd64.tgz # 解压
-cd tailscale_1.92.5_amd64/ # 进入解压后的目录
+wget https://dl.tailscale.com/stable/tailscale_1.96.4_amd64.tgz # 获取可执行文件的压缩归档
+tar -xf tailscale_1.96.4_amd64.tgz # 解压
+cd tailscale_1.96.4_amd64/ # 进入解压后的目录
 mv * .. # 将所有文件移入父目录中
 cd ..
 
@@ -195,7 +195,7 @@ nohup /root/tailscaled --tun=userspace-networking --socks5-server=localhost:1055
 chmod +x auto.sh
 ```
 
-重启完毕后使用 `root/auto.sh` 即可让节点恢复运作
+重启完毕后使用 `root/auto.sh`，再 Ctrl + 左键 弹出的链接认证即可让节点恢复运作
 
 顺便一提：精简版系统（运行在 docker 中的系统镜像）crontab 和 systemctl 等工具无法正常使用，甚至 /etc/rc.local 都不行，否则可以做到没有上面一行所说的步骤
 
