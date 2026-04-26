@@ -7,8 +7,8 @@ wget https://dl.tailscale.com/stable/tailscale_1.96.4_amd64.tgz
 tar -xf tailscale_1.96.4_amd64.tgz
 
 # 加入环境变量
-echo "alias tailscale='sudo /home/coder/tailscale_1.96.4_amd64/tailscale'" >> ~/.bashrc
-echo "alias tailscaled='sudo /home/coder/tailscale_1.96.4_amd64/tailscaled'" >> ~/.bashrc
+echo "alias tailscale='sudo /home/coder/workspace/tailscale_1.96.4_amd64/tailscale'" >> ~/.bashrc
+echo "alias tailscaled='sudo /home/coder/workspace/tailscale_1.96.4_amd64/tailscaled'" >> ~/.bashrc
 
 # 删除压缩包
 rm tailscale_1.96.4_amd64.tgz
